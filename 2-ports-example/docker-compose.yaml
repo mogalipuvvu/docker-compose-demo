@@ -1,0 +1,17 @@
+#  2.Example of port forwarding in docker-compose yaml file
+
+##################   START #########################
+
+version: "3.8"
+services:
+  learn-ports-service:
+    image: nginx
+    ports:
+      - "8080:80"
+  
+  training-service:
+    image: nginx
+    ports:
+      - "9000:80"
+
+##################   END   #########################

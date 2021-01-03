@@ -1,0 +1,13 @@
+#  Example of basic docker-compose yaml file
+
+##################   START #########################
+
+version: "3.8"
+services:
+  learn-service:
+    image: redis 
+  
+  training-service:
+    image: nginx
+
+##################   END   #########################
