@@ -1,0 +1,21 @@
+#  4.Example of docker-compose yaml - To set ENVIRONMENT variables 
+
+##################   START #########################
+
+version: "3.8"
+services:
+  learn-ports-service:
+    image: nginx
+    ports:
+      - "8080:80"
+    depends_on: 
+      - training-service 
+  training-service:
+    image: nginx
+    ports:
+      - "9000:80"
+    environment: 
+      CITY: "BANGALORE"
+      STATE: "KARNATAKA "
+ 
+##################   END   #########################

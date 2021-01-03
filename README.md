@@ -1,6 +1,8 @@
-# Docker compose is used to manage multiple containers 
+# docker-compose.yaml
 
-docker-compose --version
+**Docker compose is a tool to manage multiple containers**
+
+_docker-compose --version_
 
 Docker Compose expects an yaml file **docker-compose.yaml** with details of containers to be started. By default, it looks for **docker-compose.yaml** unless it is specified with **--f** option.
 
