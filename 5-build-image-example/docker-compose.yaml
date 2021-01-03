@@ -17,7 +17,7 @@ services:
     environment: 
       CITY: "BANGALORE"
       STATE: "KARNATAKA "
-  srini-service-123:
+  how-2-build-service:
     ##build: "./"
     build:
       context: https://github.com/mogalipuvvu/docker-demo.git#main:4-WORKDIR-example
@@ -26,3 +26,5 @@ services:
     environment: 
       country: "India"  
 ##################   END   #########################
+
+#  Refer the docker documentation of build - https://docs.docker.com/engine/reference/commandline/build/#git-repositories

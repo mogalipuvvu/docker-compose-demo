@@ -1,0 +1,22 @@
+### example yaml file from today and always save the file with extension as .yaml
+grocey-list: "something to get from the market"
+Milk: "One Packet"
+Mutton-shop: 
+  chicken: 2
+  mutton: "1 k.g"
+fancy-store: 
+  paste: Colgate
+  soaps: 
+    Dove: "6"
+    Rin: "6"
+fruits: 
+  Apples: 12
+  Banana: "1 dozen"
+  Oranges: 12
+vegetables: 
+  - michi
+  - tomato
+  - potato
+kirana: [Onions,papad, sunflower-oil]
+
+
