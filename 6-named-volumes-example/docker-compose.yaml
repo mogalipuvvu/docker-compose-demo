@@ -1,0 +1,24 @@
+#  6. Example of docker-compose yaml - Using Named Volumes
+
+##################   START #########################
+
+version: "3.8"
+services:
+  learn-ports-service:
+    image: nginx
+    ports:
+      - "8080:80"
+    environment:
+      CITY: "$Location"
+      TOPIC: "Docker and Docker Compose"
+    depends_on: 
+      - training-service 
+  training-service:
+    image: nginx
+    ports:
+      - "9000:80"
+    environment: 
+      CITY: "PONNUR"
+      STATE: "Andhra Pradesh "
+ 
+##################   END   #########################
