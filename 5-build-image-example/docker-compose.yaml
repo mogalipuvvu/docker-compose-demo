@@ -17,11 +17,10 @@ services:
     environment: 
       CITY: "BANGALORE"
       STATE: "KARNATAKA "
-  how-2-build-service:
+  how-2-build-image-service:
     ##build: "./"
     build:
       context: https://github.com/mogalipuvvu/docker-demo.git#main:4-WORKDIR-example
-      ##dockerfile: 4-WORKDIR-example/Dockerfile
     image: test-image-build-at-runtime 
     environment: 
       country: "India"  

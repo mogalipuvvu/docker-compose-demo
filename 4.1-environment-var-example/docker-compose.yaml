@@ -1,4 +1,4 @@
-#  4.Example of docker-compose yaml - To set ENVIRONMENT variables 
+#  4.1 Example of docker-compose yaml - To set ENVIRONMENT variables at runtime
 
 ##################   START #########################
 
@@ -8,6 +8,9 @@ services:
     image: nginx
     ports:
       - "8080:80"
+    environment:
+      CITY: "$Location"
+      TOPIC: "Docker and Docker Compose"
     depends_on: 
       - training-service 
   training-service:
