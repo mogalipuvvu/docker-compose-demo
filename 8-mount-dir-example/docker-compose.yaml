@@ -1,0 +1,38 @@
+#  8. Example of docker-compose yaml - mount a directory/file from the Host 
+
+##################   START #########################
+
+version: "3.8"
+services:
+  learn-ports-service:
+    image: nginx
+    ports:
+      - "8080:80"
+    environment:
+      CITY: "$Location"
+      TOPIC: "Docker and Docker Compose"
+    volumes:
+      - learn-train-vol:/usr/learn-data-1
+    depends_on: 
+      - training-service 
+  interview-service:
+    image: redis
+    environment: 
+      CITY: "Princeton"
+      STATE: "New Jersey "
+    volumes: 
+      -  devops-interview-vol:/usr/test-data
+  training-service:
+    image: nginx
+    ports:
+      - "9000:80"
+    environment: 
+      CITY: "PONNUR"
+      STATE: "Andhra Pradesh "
+    volumes:
+      - learn-train-vol:/usr/learn-data-2
+volumes: 
+  devops-interview-vol:
+  learn-train-vol:
+ 
+##################   END   #########################
