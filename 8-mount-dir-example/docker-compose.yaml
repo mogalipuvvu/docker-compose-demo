@@ -21,7 +21,7 @@ services:
       CITY: "Princeton"
       STATE: "New Jersey "
     volumes: 
-      -  devops-interview-vol:/usr/test-data
+      -  /tmp/devops-interviews:/usr/test-data
   training-service:
     image: nginx
     ports:
@@ -32,7 +32,6 @@ services:
     volumes:
       - learn-train-vol:/usr/learn-data-2
 volumes: 
-  devops-interview-vol:
   learn-train-vol:
  
 ##################   END   #########################
